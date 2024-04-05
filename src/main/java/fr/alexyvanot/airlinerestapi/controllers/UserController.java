@@ -23,9 +23,4 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    @GetMapping("/user/{id}")
-    public User user(Integer id) {
-        return userRepository.findById(id).orElse(null);
-    }
-
 }
