@@ -1,4 +1,11 @@
 package fr.alexyvanot.airlinerestapi.entities;
 
-public class Employee {
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "employees")
+public class Employee extends User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 }
